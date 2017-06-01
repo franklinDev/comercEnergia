@@ -9,17 +9,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <base href="{{ url('/') }}" target="_blank">
     <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
     <title>COMERC ENERGIA</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/blog-post.css" rel="stylesheet">
+    <link href="/css/blog-post.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,7 +37,7 @@
 <nav class="navbar navbar-default nav-color" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <a style="color: #FFFFFF" class="navbar-brand nav-brand-color" href="#"><img src="images/logo.png" alt="COMERC"></a>
+            <a style="color: #FFFFFF" class="navbar-brand nav-brand-color" href="#"><img src="/images/logo.png" alt="COMERC"></a>
         </div>
     </div>
     <!-- /.container -->
@@ -44,6 +45,7 @@
 
 <!-- Page Content -->
 @yield('content')
+
 <!-- /.container -->
 <!-- Footer -->
 <footer>
@@ -56,13 +58,13 @@
 </footer>
 
 <!-- jQuery -->
-<script src="js/jquery.js"></script>
+<script src="/js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 
 <!-- Js Home -->
-<script src="js/home.js"></script>
+<script src="/js/home.js"></script>
 
 </body>
 

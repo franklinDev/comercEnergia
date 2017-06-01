@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'PanoramaComercController@home');
+
+Route::get('/limitPost/{limit}', 'PanoramaComercController@limitPost');

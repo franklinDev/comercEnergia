@@ -16,7 +16,7 @@ class RssFeed extends Authenticatable
      *
      * @return array $rss
      */
-    public function getRssFeed ($base, $uri)
+    public function getRssFeed ($base, $uri, $limit = false)
     {
         $feed  = $this->guzzleInitXml($base, $uri);
         $count = 0;
@@ -29,6 +29,14 @@ class RssFeed extends Authenticatable
                 $rss[$count]['description']     = $article->description;
                 $rss[$count]['pubDate']         = ucfirst(strftime('%A, %d de %B de %Y', strtotime($article->pubDate)));
                 $count ++;
+
+                //Condição para saber se deve limitar os resultados
+                if ($limit !== false) {
+
+                    if ($count == $limit) {
+                        return $rss;
+                   }
+                }
             }
         }
 
