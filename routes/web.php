@@ -11,4 +11,4 @@
 |
 */
 
-Route::get('/', 'PanoramaComerc@home');
+Route::get('/', 'PanoramaComercController@home');

@@ -6,7 +6,7 @@
     <div class="row">
 
         <!-- Blog Post Content Column -->
-        <div class="col-lg-8">
+        <div class="col-lg-7">
 
             <!-- Title -->
             <h1>Panorama Comerc</h1>
@@ -35,7 +35,7 @@
         <br>
 
         <!-- Blog Sidebar Widgets Column -->
-        <div class="col-md-4">
+        <div class="col-md-5">
             <!-- Side Widget Well -->
             <div class="well">
                 <div id="cont_db50f3cf5c1d52ce772f5c268b9b2b06"><script type="text/javascript" async src="https://www.tempo.pt/wid_loader/db50f3cf5c1d52ce772f5c268b9b2b06"></script></div>
