@@ -1,0 +1,21 @@
+/*!
+ * Start Bootstrap - Blog Post (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    padding-top: 0px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+footer {
+    position: fixed;
+    height: 90px;
+    bottom: 0;
+    width: 100%;
+    background-color: #8ae445;
+}
+.nav-color {
+    background-color: #7485F6;
+    min-height: 100px;
+}
