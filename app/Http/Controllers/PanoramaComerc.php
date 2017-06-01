@@ -12,8 +12,9 @@ class PanoramaComerc extends BaseController
 {
    public function home ()
    {
-       $obj = new RssFeed();
-       $feeds = $obj->getRssFeed('http://feeds.folha.uol.com.br', '/folha/mundo/rss091.xml');
-       return view('home', ['feeds' => $feeds]);
+
+        $obj = new RssFeed();
+        $feeds = $obj->getRssFeed('http://feeds.folha.uol.com.br', '/mercado/rss091.xml');
+        return view('home', ['feeds' => $feeds]);
    }
 }

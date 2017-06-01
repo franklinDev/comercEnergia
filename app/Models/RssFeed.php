@@ -18,13 +18,18 @@ class RssFeed extends Authenticatable
      */
     public function getRssFeed ($base, $uri)
     {
-        $feed =  $this->guzzleInitXml($base, $uri);
+        $feed  = $this->guzzleInitXml($base, $uri);
+        $count = 0;
+        $rss   = [];
 
-        foreach ($feed->channel->item as $article) {
-            $rss[]['title']           = $article->title;
-            $rss[]['link']            = $article->link;
-            $rss[]['description']     = $article->description;
-            $rss[]['pubDate']         = date('d-m-Y H:i:s', strtotime($article->pubDate));
+        if (isset($feed->channel->item)) {
+            foreach ($feed->channel->item as $article) {
+                $rss[$count]['title']           = $article->title;
+                $rss[$count]['link']            = $article->link;
+                $rss[$count]['description']     = $article->description;
+                $rss[$count]['pubDate']         = ucfirst(strftime('%A, %d de %B de %Y', strtotime($article->pubDate)));
+                $count ++;
+            }
         }
 
         return $rss;

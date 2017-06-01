@@ -1,11 +1,5 @@
-/*!
- * Start Bootstrap - Blog Post (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-
 body {
-    padding-top: 0px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-bottom: 90px;
 }
 
 footer {
@@ -18,4 +12,11 @@ footer {
 .nav-color {
     background-color: #7485F6;
     min-height: 100px;
+}
+
+.clock {
+    color: #fff!important;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 18px;
 }
