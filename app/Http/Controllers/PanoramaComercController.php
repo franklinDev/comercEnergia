@@ -3,31 +3,33 @@
 namespace ComercExperimental\Http\Controllers;
 
 use ComercExperimental\Models\RssFeed;
-use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+
 
 class PanoramaComercController extends BaseController
 {
 
-    private $rss = null;
+    private $rss    = null;
+    private $base   = '';
+    private $uri    = '';
 
     public function __construct()
     {
         $this->rss = new RssFeed();
+        $this->base   = 'http://feeds.folha.uol.com.br';
+        $this->uri    = '/ambiente/rss091.xml';
     }
 
     public function home ()
     {
-        $feeds = $this->rss->getRssFeed('http://feeds.folha.uol.com.br', '/ambiente/rss091.xml', 4);
+        $feeds = $this->rss->getRssFeed($this->base, $this->uri, 4);
         return view('home', ['feeds' => $feeds]);
     }
 
 
     public function limitPost ($limit)
     {
-        $feeds = $this->rss->getRssFeed('http://feeds.folha.uol.com.br', '/ambiente/rss091.xml', $limit);
+        $feeds = $this->rss->getRssFeed($this->base, $this->uri, $limit);
         return view('home', ['feeds' => $feeds]);
     }
 }

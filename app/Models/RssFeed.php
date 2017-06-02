@@ -2,7 +2,6 @@
 
 namespace ComercExperimental\Models;
 
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use GuzzleHttp\Client;
 
@@ -32,7 +31,6 @@ class RssFeed extends Authenticatable
 
                 //Condição para saber se deve limitar os resultados
                 if ($limit !== false) {
-
                     if ($count == $limit) {
                         return $rss;
                    }
